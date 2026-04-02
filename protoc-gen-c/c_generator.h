@@ -93,14 +93,14 @@ class PROTOBUF_C_EXPORT CGenerator : public google::protobuf::compiler::CodeGene
                 google::protobuf::compiler::OutputDirectory* output_directory,
                 std::string* error) const;
 
-#if GOOGLE_PROTOBUF_VERSION >= 5026000
+// #if GOOGLE_PROTOBUF_VERSION >= 5026000
   uint64_t GetSupportedFeatures() const override {
     // Indicate that this code generator supports proto3 optional fields.
     return FEATURE_PROTO3_OPTIONAL;
   }
-  google::protobuf::Edition GetMinimumEdition() const { return google::protobuf::Edition::EDITION_PROTO2; }
-  google::protobuf::Edition GetMaximumEdition() const { return google::protobuf::Edition::EDITION_PROTO3; }
-#endif
+//  google::protobuf::Edition GetMinimumEdition() const { return google::protobuf::Edition::EDITION_PROTO2; }
+//  google::protobuf::Edition GetMaximumEdition() const { return google::protobuf::Edition::EDITION_PROTO3; }
+// #endif
 };
 
 }  // namespace protobuf_c
